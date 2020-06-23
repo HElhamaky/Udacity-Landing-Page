@@ -67,6 +67,9 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
   padding-left: 0;
   margin: 0;
   text-align: right;
@@ -98,17 +101,17 @@ section {
   color: #fff;
 }
 
-.navbar__menu .menu__link.active__link {
+.navbar__menu .menu__link.active {
   background-color: #333;
 }
 
-.navbar__menu .menu__link.active__link a,
-.navbar__menu .menu__link.active__link a:link {
+.navbar__menu .menu__link.active a,
+.navbar__menu .menu__link.active a:link {
   color: rgb(136, 203, 171);
   text-decoration: none;
 }
 
-.navbar__menu .active__link {
+.navbar__menu .active {
   background: #333;
   color: #fff;
   transition: ease 0.3s all;
@@ -236,7 +239,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.active__link {
+section.active {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
@@ -245,12 +248,12 @@ section.active__link {
   );
 }
 
-section.active__link .landing__container::before {
+section.active .landing__container::before {
   opacity: 1;
   animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.active__link .landing__container::after {
+section.active .landing__container::after {
   opacity: 1;
   animation: rotate 5s linear 0s infinite forwards reverse;
 }

@@ -62,11 +62,11 @@ function getActiveElem() {
     window.addEventListener('scroll', function (event) {
         let section = getActiveElem();
         const active = document.querySelector('li[data-link="' + section.id + '"]');
-        active.classList.add('active__link');
+        active.classList.add('active');
         const headers = document.querySelectorAll('li');
         for (let item of headers) {
-            if (item.dataset.link !== active.dataset.link && item.classList.contains('active__link')) {
-                item.classList.remove('active__link');
+            if (item.dataset.link !== active.dataset.link && item.classList.contains('active')) {
+                item.classList.remove('active');
             }
         };
     });
